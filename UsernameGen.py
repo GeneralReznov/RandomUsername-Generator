@@ -38,12 +38,12 @@ def generate_random_username(adjectives, nouns):
     return username
 
 # Function to save the generated usernames (append to the text file)
-def save_username_to_file(username, filename='D:/Libraries/ritwik/Documents/Mokshit/Python Internship Projects/Project-1/Usernames.txt'):
+def save_username_to_file(username, filename='Usernames.txt'):
     with open(filename, 'a') as infile:
         infile.write(username + "\n")
 
 # Function to display the generated usernames along with their lengths
-def display_usernames(filename='D:/Libraries/ritwik/Documents/Mokshit/Python Internship Projects/Project-1/Usernames.txt'):
+def display_usernames(filename='Usernames.txt'):
     try:
         with open(filename, 'r') as infile:
             read = infile.read().strip(' \n').split('\n')
@@ -61,9 +61,9 @@ def main():
                 print("Invalid Input\n")
                 exit()
     # Read word lists
-    with open('D:/Libraries/ritwik/Documents/Mokshit/Python Internship Projects/Project-1/Nouns.txt', 'r') as infile:
+    with open('Nouns.txt', 'r') as infile:
         nouns = infile.read().strip(' \n').split('\n')
-    with open('D:/Libraries/ritwik/Documents/Mokshit/Python Internship Projects/Project-1/Adjectives.txt', 'r') as infile:
+    with open('Adjectives.txt', 'r') as infile:
         adjectives = infile.read().strip(' \n').split('\n')
 
     # Loop for generating n number of usernames
